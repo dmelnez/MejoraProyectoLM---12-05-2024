@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botón Cambiar Fondo</title>
+<style>
+  #miDiv {
+    width: 200px;
+    height: 200px;
+    color: #000; /* Color de texto por defecto */
+    border: 1px solid #000;
+  }
+</style>
+</head>
+<body>
+
+<div id="miDiv">a</div>
+<button onclick="cambiarFondo()">Cambiar Fondo</button>
+
+<script>
+  var fondoOriginal = true;
+
+  function cambiarFondo() {
+    var div = document.getElementById("miDiv");
+    if (fondoOriginal) {
+      div.style.backgroundColor = "black";
+      div.style.color = "white"; // Cambiar color del texto a blanco
+      fondoOriginal = false;
+    } else {
+      div.style.backgroundColor = "white";
+      div.style.color = "#000"; // Restaurar color del texto por defecto
+      fondoOriginal = true;
+    }
+  }
+</script>
+
+</body>
+</html>
